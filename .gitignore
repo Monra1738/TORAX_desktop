@@ -1,12 +1,17 @@
+# Runtime data and local caches
 var/
+
+# Python-generated files
 __pycache__/
+*.py[cod]
 *.egg-info/
-.DS_Store
-var/
-__pycache__/
-*.egg-info/
-.DS_Store
-var/
-__pycache__/
-*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build artifacts
+build/
+dist/
+
+# macOS metadata
 .DS_Store
