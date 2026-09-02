@@ -8,9 +8,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from jaxa_udon3.desktop.science_views import energy_image, rgb_image, spectrum, voxel_histogram
-from jaxa_udon3.domain import EventFile, SkyRegion
-from jaxa_udon3.infrastructure import cache_repository, event_sources, science
+from jaxa_torax.desktop.science_views import energy_image, rgb_image, spectrum, voxel_histogram
+from jaxa_torax.domain import EventFile, SkyRegion
+from jaxa_torax.infrastructure import cache_repository, event_sources, science
 
 
 class DataContractTests(unittest.TestCase):

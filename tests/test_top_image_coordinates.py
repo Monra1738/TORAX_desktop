@@ -9,9 +9,9 @@ import pyvista as pv
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.desktop.science_views import EnergySceneTransform, SkyViewport
-from jaxa_udon3.desktop.top_image import scene_image_plane_geometry
-from jaxa_udon3.desktop.viewer_3d_helpers import (
+from jaxa_torax.desktop.science_views import EnergySceneTransform, SkyViewport
+from jaxa_torax.desktop.top_image import scene_image_plane_geometry
+from jaxa_torax.desktop.viewer_3d_helpers import (
     _set_cube_axes,
     balanced_scene_transform,
     scientific_axis_bounds,

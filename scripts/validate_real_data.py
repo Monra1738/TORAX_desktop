@@ -19,7 +19,7 @@ from pathlib import Path
 
 import numpy as np
 
-from jaxa_udon3.infrastructure import event_sources, science
+from jaxa_torax.infrastructure import event_sources, science
 
 EXPECTED_PAIRS = {
     "asca/gis", "asca/sis", "suzaku/xis", "hitomi/sxs", "hitomi/sxi", "hitomi/hxi",

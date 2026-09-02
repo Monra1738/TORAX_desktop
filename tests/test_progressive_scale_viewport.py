@@ -16,28 +16,28 @@ from PySide6.QtWidgets import QApplication
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.desktop.analysis import SpectrumWidget
-from jaxa_udon3.desktop.data_controller import balanced_row_limits, exact_energy
-from jaxa_udon3.desktop.main_refresh import RefreshMixin
-from jaxa_udon3.desktop.observation_session import (
+from jaxa_torax.desktop.analysis import SpectrumWidget
+from jaxa_torax.desktop.data_controller import balanced_row_limits, exact_energy
+from jaxa_torax.desktop.main_refresh import RefreshMixin
+from jaxa_torax.desktop.observation_session import (
     ObservationLoadSession,
     is_transient_preview_error,
     load_observation_preview_resilient,
 )
-from jaxa_udon3.desktop.panels import ObservationBrowserDialog
-from jaxa_udon3.desktop.science_views import (
+from jaxa_torax.desktop.panels import ObservationBrowserDialog
+from jaxa_torax.desktop.science_views import (
     SkyViewport,
     SpectrumProduct,
     energy_image,
     energy_to_plot_x,
     plot_x_to_energy,
 )
-from jaxa_udon3.desktop.state import DesktopState, EnergySlice
-from jaxa_udon3.desktop.viewers import ImagePlot, SkyView
-from jaxa_udon3.desktop.window_actions import WindowActionsMixin
-from jaxa_udon3.desktop.workspace_persistence import WorkspacePersistenceMixin
-from jaxa_udon3.domain import EventFile, SkyRegion
-from jaxa_udon3.infrastructure import event_sources, previews
+from jaxa_torax.desktop.state import DesktopState, EnergySlice
+from jaxa_torax.desktop.viewers import ImagePlot, SkyView
+from jaxa_torax.desktop.window_actions import WindowActionsMixin
+from jaxa_torax.desktop.workspace_persistence import WorkspacePersistenceMixin
+from jaxa_torax.domain import EventFile, SkyRegion
+from jaxa_torax.infrastructure import event_sources, previews
 
 APP = QApplication.instance() or QApplication([])
 
@@ -79,7 +79,7 @@ class ProgressiveLoadingTests(unittest.TestCase):
             return "loaded"
 
         with patch(
-            "jaxa_udon3.desktop.observation_session.load_observation_preview",
+            "jaxa_torax.desktop.observation_session.load_observation_preview",
             side_effect=preview,
         ):
             result = load_observation_preview_resilient(
@@ -111,7 +111,7 @@ class ProgressiveLoadingTests(unittest.TestCase):
             lambda _sid, keys, failed: finished.append((keys, failed))
         )
         with patch(
-            "jaxa_udon3.desktop.observation_session.load_observation_preview",
+            "jaxa_torax.desktop.observation_session.load_observation_preview",
             side_effect=lambda item, *_args: SimpleNamespace(record=item),
         ):
             session.start()
@@ -153,7 +153,7 @@ class ProgressiveLoadingTests(unittest.TestCase):
         session.observation_failed.connect(lambda _sid, key, message: failed.append((key, message)))
         session.progress_changed.connect(lambda _sid, done, total, _key: progress.append((done, total)))
         session.session_finished.connect(lambda _sid, keys, failures: finished.append((keys, failures)))
-        with patch("jaxa_udon3.desktop.data_controller.backend.read_region_preview", side_effect=preview):
+        with patch("jaxa_torax.desktop.data_controller.backend.read_region_preview", side_effect=preview):
             session.start()
         self.assertEqual(loaded, ["one", "three"])
         self.assertEqual(len(failed), 1)
@@ -166,7 +166,7 @@ class ProgressiveLoadingTests(unittest.TestCase):
         loaded = []
         session.observation_loaded.connect(lambda *_: loaded.append(True))
         with patch(
-            "jaxa_udon3.desktop.data_controller.backend.read_region_preview",
+            "jaxa_torax.desktop.data_controller.backend.read_region_preview",
             return_value=(pd.DataFrame({"RA": [1], "DEC": [2], "KEV": [3]}), {}, 1, True),
         ):
             session.start()
@@ -200,7 +200,7 @@ class ProgressiveLoadingTests(unittest.TestCase):
             }
 
         with patch(
-            "jaxa_udon3.desktop.data_controller.backend.exact_energy_image",
+            "jaxa_torax.desktop.data_controller.backend.exact_energy_image",
             side_effect=product,
         ):
             result = exact_energy(
@@ -485,7 +485,7 @@ class FixedViewportTests(unittest.TestCase):
         guide_bands = []
 
         with patch(
-            "jaxa_udon3.desktop.main_refresh.sync_scene_guides",
+            "jaxa_torax.desktop.main_refresh.sync_scene_guides",
             side_effect=lambda _viewer, _region, band, *_args: guide_bands.append(band),
         ):
             harness.state.content_mode = "active"

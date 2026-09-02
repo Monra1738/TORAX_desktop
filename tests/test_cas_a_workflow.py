@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.infrastructure.cas_a import (
+from jaxa_torax.infrastructure.cas_a import (
     CAS_A_BANDS,
     CAS_A_REGION,
     cas_a_manifest,

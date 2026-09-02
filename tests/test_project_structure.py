@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "src" / "jaxa_udon3"
+SOURCE = ROOT / "src" / "jaxa_torax"
 sys.path.insert(0, str(ROOT / "src"))
 
 

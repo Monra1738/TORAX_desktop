@@ -7,4 +7,4 @@ fi
 source .venv/bin/activate
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install -e '.[dev]'
-exec udon3-desktop "$@"
+exec torax-desktop "$@"

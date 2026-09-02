@@ -1,6 +1,6 @@
-# UDON3 Theme 2 — Native Desktop X-ray Event Explorer
+# TORAX Theme 2 — Native Desktop X-ray Event Explorer
 
-UDON3 Theme 2 is a **desktop-only** JAXA/DARTS X-ray event exploration tool built with
+TORAX Theme 2 is a **desktop-only** JAXA/DARTS X-ray event exploration tool built with
 **PySide6 + PyVista/VTK + PyQtGraph**. The existing scientific backend remains responsible
 for DARTS catalog access, Sesame/WCS coordinates, instrument PI→keV calibration, caching,
 and exact science products.
@@ -102,7 +102,7 @@ successful observations. Selecting a genuinely different region creates a separa
 
 ## Saved workspaces
 
-UDON3 automatically saves the active target and viewport, selected/visible observations, pending and
+TORAX automatically saves the active target and viewport, selected/visible observations, pending and
 failed references, spectrum scale, 2D zoom, energy and RGB controls, slices, ROI, layout, rendering
 mode, and 3D camera in the local `darts_events.duckdb` cache database.
 On restart it restores the most recently used workspace and reuses local preview products whenever
@@ -137,7 +137,7 @@ The Search dialog has a **Quick target → Cas A** option using the coordinate i
 
 Search with the ASCA, Suzaku, and XRISM instruments enabled, then add the observations you want.
 XRISM observations **000129000** and **000130000** are specifically referenced in the Theme 2 task,
-but the purpose of UDON3 is to combine relevant ASCA + Suzaku + XRISM data rather than restrict
+but the purpose of TORAX is to combine relevant ASCA + Suzaku + XRISM data rather than restrict
 Cas A to XRISM alone.
 
 Under **ENERGY SLICES**, choose:
@@ -168,7 +168,7 @@ the extracted PDF reference figures, and `cas_a_manifest.json` under `var/export
 `--include-xtend` opts into the two much larger XRISM Xtend files.
 
 For a headless startup/screenshot check on machines without a working VTK display, use
-`udon3-desktop --no-3d --screenshot var/exports/desktop_startup.png`.
+`torax-desktop --no-3d --screenshot var/exports/desktop_startup.png`.
 
 For a three-channel Cas A view, select **RGB composite** in the 2D product picker, then choose
 **Inspector → RGB COMPOSITE → Use Cas A ASCA RGB**.  This maps low continuum
@@ -205,7 +205,7 @@ Dragging one slice does not rebuild the slice list or recompute unchanged slice 
 
 ## Data size model
 
-UDON3 deliberately separates full/loaded science information from the interactive display:
+TORAX deliberately separates full/loaded science information from the interactive display:
 
 - observation previews are loaded once and cached;
 - the interactive 3D view has a bounded point budget;
@@ -233,7 +233,7 @@ all-event image for full-data spatial verification and the 3D cloud for interact
 
 The reproducible ASCA comparison uses observations **50018000** and **50018010** from
 1993-08-01, the observations associated with Holt et al. (PASJ 46, L151–L155, 1994). The four
-energy bands match the literature. UDON3's output is an exact raw-event histogram; the published
+energy bands match the literature. TORAX's output is an exact raw-event histogram; the published
 panels used PSF restoration to approximately 30 arcsec FWHM. Consequently, a raw map should not be
 expected to be pixel-identical to the restored paper figure.
 
@@ -243,7 +243,7 @@ and preview rows in the selected band so downsampling is not mistaken for data l
 ## Scientific functionality
 
 - decimal RA/DEC, sexagesimal RA/DEC, or target name through Sesame;
-- DARTS/UDON3 catalogs for ASCA, Suzaku, Hitomi and XRISM;
+- DARTS/TORAX catalogs for ASCA, Suzaku, Hitomi and XRISM;
 - ASCA GIS/SIS, Suzaku XIS, Hitomi SXS/SXI/HXI, XRISM Resolve/Xtend;
 - instrument-aware PI→keV conversion;
 - rotatable/zoomable RA × DEC × Energy PyVista scene;
@@ -277,7 +277,7 @@ python -m pip install -e '.[dev]'
 ## Run
 
 ```bash
-udon3-desktop
+torax-desktop
 ```
 
 or:
@@ -295,5 +295,5 @@ python -m unittest discover -v tests
 Qt/PyVista window rendering needs an OpenGL-capable desktop environment. The packaging environment
 can validate syntax, state/science calculations, structure, and caches, but cannot launch the native
 PySide6 window because Qt is not installed there.
-# UDON3_Theme2_Desktop_Performance
+# TORAX_Theme2_Desktop_Performance
 # TORAX_desktop

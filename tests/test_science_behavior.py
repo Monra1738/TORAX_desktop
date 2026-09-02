@@ -12,7 +12,7 @@ from astropy.coordinates import SkyCoord
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.infrastructure import science as backend
+from jaxa_torax.infrastructure import science as backend
 
 
 class ScienceBehaviorTests(unittest.TestCase):

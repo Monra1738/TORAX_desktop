@@ -1,6 +1,6 @@
 # Architecture
 
-UDON3 Theme 2 is distributed as a native desktop application.
+TORAX Theme 2 is distributed as a native desktop application.
 
 ```text
 PySide6 desktop UI

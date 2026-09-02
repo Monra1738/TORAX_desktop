@@ -117,7 +117,7 @@ def _render_comparison(
     canvas = Image.new("RGB", (width, thumb_height * (len(references) + 1) + 42), "white")
     canvas.paste(generated, (0, 42))
     draw = ImageDraw.Draw(canvas)
-    draw.text((10, 12), "UDON3 generated ASCA/Suzaku/XRISM bands vs Theme 2 PDF reference", fill="black")
+    draw.text((10, 12), "TORAX generated ASCA/Suzaku/XRISM bands vs Theme 2 PDF reference", fill="black")
     for index, reference in enumerate(references, start=1):
         reference.thumbnail((width, thumb_height), Image.Resampling.LANCZOS)
         canvas.paste(reference, (0, 42 + index * thumb_height))
@@ -128,22 +128,22 @@ def _render_comparison(
 
 def run(args: argparse.Namespace) -> dict:
     data_root = args.data_root.expanduser().resolve()
-    os.environ["UDON3_DATA_ROOT"] = str(data_root)
+    os.environ["TORAX_DATA_ROOT"] = str(data_root)
     output_dir = (args.output_dir or data_root / "exports" / "cas_a").expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Imports follow UDON3_DATA_ROOT so all paths use the normal application cache.
-    from jaxa_udon3.infrastructure.cas_a import (
+    # Imports follow TORAX_DATA_ROOT so all paths use the normal application cache.
+    from jaxa_torax.infrastructure.cas_a import (
         CAS_A_BANDS,
         CAS_A_REGION,
         cas_a_manifest,
         cas_a_record_specs,
         cas_a_records,
     )
-    from jaxa_udon3.infrastructure.event_sources import ensure_cached
-    from jaxa_udon3.infrastructure.images import exact_all_events_image, exact_energy_image
-    from jaxa_udon3.infrastructure.previews import read_compact_preview
-    from jaxa_udon3.infrastructure.science_core import DB_PATH
+    from jaxa_torax.infrastructure.event_sources import ensure_cached
+    from jaxa_torax.infrastructure.images import exact_all_events_image, exact_energy_image
+    from jaxa_torax.infrastructure.previews import read_compact_preview
+    from jaxa_torax.infrastructure.science_core import DB_PATH
 
     specs = cas_a_record_specs(args.include_xtend)
     records = cas_a_records(include_xtend=args.include_xtend)
@@ -257,7 +257,7 @@ def run(args: argparse.Namespace) -> dict:
             "50018010 identified in the official HEASARC ASCA master catalog."
         ),
         (
-            "The literature panels are PSF-restored to about 30 arcsec FWHM. UDON3 currently "
+            "The literature panels are PSF-restored to about 30 arcsec FWHM. TORAX currently "
             "shows exact raw sky histograms, so detector footprint, background, exposure, PSF, "
             "and continuum-subtraction differences remain and exact pixel equality is not claimed."
         ),

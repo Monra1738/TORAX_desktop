@@ -1,7 +1,7 @@
 # Project layout
 
 ```text
-src/jaxa_udon3/
+src/jaxa_torax/
 ├── desktop/                 native PySide6 frontend
 │   ├── app.py               entry point
 │   ├── main_window.py       orchestration and interactions

@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.desktop.app_reset import clear_application_storage
+from jaxa_torax.desktop.app_reset import clear_application_storage
 
 
 class ApplicationResetTests(unittest.TestCase):

@@ -4,7 +4,7 @@
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────┐
-│ UDON3   target search   fixed RA/DEC/radius                 Search/Add  │
+│ TORAX   target search   fixed RA/DEC/radius                 Search/Add  │
 ├───────────────┬──────────────────────────────────┬───────────────────────┤
 │ Loaded data   │              3D                  │ Inspector             │
 │ visibility    │                                  │                       │
@@ -35,7 +35,7 @@ The 3D and 2D panes share a draggable Qt splitter. The layout selector supports
 
 ## Saved target workspaces
 
-After a 500 ms idle debounce, UDON3 saves the region, observations and visibility,
+After a 500 ms idle debounce, TORAX saves the region, observations and visibility,
 energy and RGB controls, slices, ROI A/B, rendering/layout state, and camera to the
 local DuckDB database. The latest workspace restores on launch. The **Workspaces**
 menu lists prior target regions; opening one restores it without combining its data

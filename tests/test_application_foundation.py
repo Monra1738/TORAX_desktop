@@ -6,8 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.domain import CircleSelection, RectangleSelection
-from jaxa_udon3.infrastructure.filesystem import ProductStore
+from jaxa_torax.domain import CircleSelection, RectangleSelection
+from jaxa_torax.infrastructure.filesystem import ProductStore
 
 
 class ApplicationFoundationTests(unittest.TestCase):

@@ -7,10 +7,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from jaxa_udon3.desktop.science_views import filter_rectangle, rgb_event_colors
-from jaxa_udon3.desktop.viewer_3d import ThreeDView
-from jaxa_udon3.domain import EventFile
-from jaxa_udon3.infrastructure import science as backend
+from jaxa_torax.desktop.science_views import filter_rectangle, rgb_event_colors
+from jaxa_torax.desktop.viewer_3d import ThreeDView
+from jaxa_torax.domain import EventFile
+from jaxa_torax.infrastructure import science as backend
 
 
 class _Observation:

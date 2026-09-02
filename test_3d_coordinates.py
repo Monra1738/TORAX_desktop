@@ -165,7 +165,7 @@ def show_absolute_coordinates(
     )
     plotter.view_isometric()
     plotter.reset_camera(bounds=axis_bounds)
-    plotter.show(title="UDON3 absolute-coordinate 3D test")
+    plotter.show(title="TORAX absolute-coordinate 3D test")
 
 
 def main() -> None:

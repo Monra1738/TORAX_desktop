@@ -14,12 +14,12 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from PySide6.QtWidgets import QApplication
 
-from jaxa_udon3.desktop.analysis import SpectrumWidget
-from jaxa_udon3.desktop.data_controller import load_previews
-from jaxa_udon3.desktop.inspector import InspectorPanel
-from jaxa_udon3.desktop.science_views import SpectrumProduct
-from jaxa_udon3.desktop.state import EnergySlice
-from jaxa_udon3.infrastructure import science as backend
+from jaxa_torax.desktop.analysis import SpectrumWidget
+from jaxa_torax.desktop.data_controller import load_previews
+from jaxa_torax.desktop.inspector import InspectorPanel
+from jaxa_torax.desktop.science_views import SpectrumProduct
+from jaxa_torax.desktop.state import EnergySlice
+from jaxa_torax.infrastructure import science as backend
 
 
 class NativeEnergyControlTests(unittest.TestCase):
@@ -112,7 +112,7 @@ class NativeEnergyControlTests(unittest.TestCase):
         )
         frame = pd.DataFrame({"RA": [1.0], "DEC": [2.0], "PI": [2000], "KEV": [1.0]})
         with patch(
-            "jaxa_udon3.desktop.data_controller.backend.read_region_preview",
+            "jaxa_torax.desktop.data_controller.backend.read_region_preview",
             return_value=(frame, {}, 1, False),
         ):
             payload = load_previews([record], object(), max_points=1_000)

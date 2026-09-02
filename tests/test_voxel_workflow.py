@@ -13,11 +13,11 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from PySide6.QtWidgets import QApplication
 
-from jaxa_udon3.desktop.inspector import InspectorPanel
-from jaxa_udon3.desktop.main_window import MainWindow
-from jaxa_udon3.desktop.state import DesktopState, EnergySlice
-from jaxa_udon3.desktop.viewer_3d import enabled_slice_point_uids
-from jaxa_udon3.desktop.voxel_workflow import resolved_voxel_energy_band
+from jaxa_torax.desktop.inspector import InspectorPanel
+from jaxa_torax.desktop.main_window import MainWindow
+from jaxa_torax.desktop.state import DesktopState, EnergySlice
+from jaxa_torax.desktop.viewer_3d import enabled_slice_point_uids
+from jaxa_torax.desktop.voxel_workflow import resolved_voxel_energy_band
 
 
 class VoxelWorkflowTests(unittest.TestCase):

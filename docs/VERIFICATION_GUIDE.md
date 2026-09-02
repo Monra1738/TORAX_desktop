@@ -1,4 +1,4 @@
-# UDON3 Theme 2 Verification Guide
+# TORAX Theme 2 Verification Guide
 
 This guide is the acceptance checklist for Ken's Theme 2 requirements. Complete the
 offline checks first, then the real-data checks, then the interactive checklist. Do not
@@ -18,16 +18,16 @@ pytest -q
 Normal application:
 
 ```bash
-udon3-desktop
+torax-desktop
 ```
 
 Headless smoke screenshot:
 
 ```bash
-QT_QPA_PLATFORM=offscreen udon3-desktop --no-3d --screenshot var/exports/startup.png
+QT_QPA_PLATFORM=offscreen torax-desktop --no-3d --screenshot var/exports/startup.png
 ```
 
-The screenshot must be non-empty and show the UDON3 title, Data & Layers, Inspector,
+The screenshot must be non-empty and show the TORAX title, Data & Layers, Inspector,
 Analysis, and the 3D/2D workspace areas.
 
 ## 2. Data validation
@@ -89,7 +89,7 @@ external failures, but it must not be needed for normal DuckDB concurrency.
 7. Add observations from multiple missions and confirm the status bar distinguishes
    loaded, visible, and displayed preview rows.
 8. Select at least ten observations in one operation. Confirm transient messages retry
-   automatically and the final loaded/failed totals remain stable after restarting UDON3.
+   automatically and the final loaded/failed totals remain stable after restarting TORAX.
    For a release stress check, run the automated 500-record queue and DuckDB-cycle tests:
 
    ```bash

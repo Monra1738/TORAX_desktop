@@ -7,8 +7,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.desktop.science_views import combine_frames
-from jaxa_udon3.desktop.state import DesktopState
+from jaxa_torax.desktop.science_views import combine_frames
+from jaxa_torax.desktop.state import DesktopState
 
 
 class DummyRecord:

@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jaxa-udon3-explorer"
+name = "jaxa-torax-explorer"
 version = "0.1.0"
-description = "Multi-mission JAXA DARTS/UDON3 X-ray event explorer"
+description = "Multi-mission JAXA DARTS/TORAX X-ray event explorer"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -25,9 +25,9 @@ dependencies = [
 dev = ["pytest>=7", "ruff>=0.6"]
 
 [project.scripts]
-udon3-desktop = "jaxa_udon3.desktop.app:main"
-udon3-bootstrap = "jaxa_udon3.cli.bootstrap:main"
-udon3-cache = "jaxa_udon3.cli.cache:main"
+torax-desktop = "jaxa_torax.desktop.app:main"
+torax-bootstrap = "jaxa_torax.cli.bootstrap:main"
+torax-cache = "jaxa_torax.cli.cache:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

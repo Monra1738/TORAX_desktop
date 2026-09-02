@@ -10,14 +10,14 @@ import numpy as np
 import pandas as pd
 from PySide6.QtWidgets import QApplication
 
-from jaxa_udon3.desktop.analysis import AnalysisDock
-from jaxa_udon3.desktop.inspector import InspectorPanel
-from jaxa_udon3.desktop.panels import (
+from jaxa_torax.desktop.analysis import AnalysisDock
+from jaxa_torax.desktop.inspector import InspectorPanel
+from jaxa_torax.desktop.panels import (
     DataLayersPanel,
     ObservationBrowserDialog,
     SearchDialog,
 )
-from jaxa_udon3.desktop.state import EnergySlice
+from jaxa_torax.desktop.state import EnergySlice
 
 APP = QApplication.instance() or QApplication([])
 

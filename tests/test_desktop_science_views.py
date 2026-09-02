@@ -8,8 +8,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from jaxa_udon3.desktop import science_views as views
-from jaxa_udon3.desktop.viewer_3d import ThreeDView
+from jaxa_torax.desktop import science_views as views
+from jaxa_torax.desktop.viewer_3d import ThreeDView
 
 
 class DesktopScienceViewTests(unittest.TestCase):

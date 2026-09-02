@@ -5,10 +5,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from jaxa_udon3.desktop.state import DesktopState, EnergySlice
-from jaxa_udon3.desktop.viewer_3d import ThreeDView
-from jaxa_udon3.desktop.workspace_persistence import WorkspacePersistenceMixin
-from jaxa_udon3.infrastructure import science as backend
+from jaxa_torax.desktop.state import DesktopState, EnergySlice
+from jaxa_torax.desktop.viewer_3d import ThreeDView
+from jaxa_torax.desktop.workspace_persistence import WorkspacePersistenceMixin
+from jaxa_torax.infrastructure import science as backend
 
 
 def snapshot(workspace_id="cas-a", target="Cas A", records=2):
