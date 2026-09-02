@@ -5,6 +5,110 @@ TORAX Theme 2 is a **desktop-only** JAXA/DARTS X-ray event exploration tool buil
 for DARTS catalog access, Sesame/WCS coordinates, instrument PI→keV calibration, caching,
 and exact science products.
 
+## Quick Start: Setup and Run
+
+### Prerequisites
+
+- Python **>= 3.11** (Python 3.11 or 3.12 recommended)
+- An OpenGL-capable environment / graphics drivers for 3D PyVista/VTK rendering
+
+---
+
+### 1. Installation & Environment Setup
+
+#### Windows (PowerShell / Command Prompt)
+
+```powershell
+# Create and activate virtual environment (PowerShell)
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+# Or in Windows Command Prompt (cmd.exe):
+# .venv\Scripts\activate.bat
+
+# Upgrade packaging tools and install in editable mode
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e ".[dev]"
+```
+
+> [!TIP]
+> If script execution is disabled in PowerShell, run:
+> `Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned`
+
+#### Linux (Ubuntu / Debian / Fedora)
+
+Ensure required OpenGL and Qt/xcb libraries are present:
+
+```bash
+# Ubuntu / Debian system dependencies
+sudo apt update && sudo apt install -y python3-venv python3-pip libgl1 libegl1 libxkbcommon-x11-0 libxcb-cursor0
+
+# Fedora system dependencies:
+# sudo dnf install python3-devel mesa-libGL mesa-libEGL libxkbcommon libxcb
+
+# Create and activate virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Upgrade packaging tools and install in editable mode
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[dev]'
+```
+
+#### macOS
+
+```bash
+# Install Python 3.11 via Homebrew if needed
+brew install python@3.11
+
+# Create and activate virtual environment
+python3.11 -m venv .venv
+source .venv/bin/activate
+
+# Upgrade packaging tools and install in editable mode
+python -m pip install --upgrade pip setuptools wheel
+python -m pip install -e '.[dev]'
+```
+
+---
+
+### 2. Launch the Application
+
+Once your virtual environment is active:
+
+```bash
+# Standard desktop launch (entry point)
+torax-desktop
+
+# Or directly via the Python launcher (cross-platform)
+python desktop_launcher.py
+```
+
+- **macOS shell shortcut:**
+  ```bash
+  ./scripts/run_desktop_macos.sh
+  ```
+
+- **Headless / No-3D fallback:**
+  If testing on a remote server, CI, or machine without OpenGL display:
+  ```bash
+  torax-desktop --no-3d --screenshot var/exports/desktop_startup.png
+  ```
+
+---
+
+### 3. Run Tests
+
+```bash
+# Run tests with pytest
+pytest
+
+# Or with unittest
+python -m unittest discover -v tests
+```
+
+---
+
 ## Performance-first revision
 
 This build is focused on making the UI feel immediate while keeping the scientific workflow
@@ -262,38 +366,12 @@ and preview rows in the selected band so downsampling is not mistaken for data l
 - exact energy/RGB products;
 - CSV/Parquet preview export and screenshots.
 
-## Install on macOS
+## Environment and Graphics Notes
 
-Python 3.11 is recommended.
-
-```bash
-brew install python@3.11
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install -e '.[dev]'
-```
-
-## Run
+Qt/PyVista window rendering requires an OpenGL-capable desktop environment with active display output.
+Headless or virtual environments without GPU/OpenGL acceleration can validate science logic, tests, and data caches with `pytest`, or generate offscreen screenshots using:
 
 ```bash
-torax-desktop
+torax-desktop --no-3d --screenshot var/exports/desktop_startup.png
 ```
 
-or:
-
-```bash
-./scripts/run_desktop_macos.sh
-```
-
-## Tests
-
-```bash
-python -m unittest discover -v tests
-```
-
-Qt/PyVista window rendering needs an OpenGL-capable desktop environment. The packaging environment
-can validate syntax, state/science calculations, structure, and caches, but cannot launch the native
-PySide6 window because Qt is not installed there.
-# TORAX_Theme2_Desktop_Performance
-# TORAX_desktop
