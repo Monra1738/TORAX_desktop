@@ -1,0 +1,4 @@
+[console_scripts]
+udon3-bootstrap = jaxa_udon3.cli.bootstrap:main
+udon3-cache = jaxa_udon3.cli.cache:main
+udon3-desktop = jaxa_udon3.desktop.app:main

@@ -1,0 +1,406 @@
+2026-08-31 19:51:19,480 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 19:51:19,482 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 19:51:19,482 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 19:51:19,482 INFO record=asca/gis/retry recovered_on_attempt=3/4
+2026-08-31 19:54:19,649 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 19:54:19,651 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 19:54:19,651 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 19:54:19,652 INFO record=asca/gis/retry recovered_on_attempt=3/4
+2026-08-31 20:02:00,692 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 20:02:00,694 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:02:00,694 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:02:00,694 INFO record=asca/gis/retry recovered_on_attempt=3/4
+2026-08-31 20:03:24,937 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 20:03:24,940 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:03:24,940 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:03:24,940 INFO record=asca/gis/retry recovered_on_attempt=3/4
+2026-08-31 20:18:22,659 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 20:18:22,661 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:18:22,662 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:18:22,662 INFO record=asca/gis/retry recovered_on_attempt=3/4
+2026-08-31 20:19:30,341 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 20:19:30,344 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:19:30,345 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:19:30,345 INFO record=asca/gis/retry recovered_on_attempt=3/4
+2026-08-31 20:20:17,643 ERROR record=xrism/resolve/bad attempt=1/4 transient=False error=OSError: calibrated source unavailable
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/data_controller.py", line 138, in load_observation_preview
+    frame, metadata, events_in_region, _cache_hit = backend.read_region_preview(
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 147, in preview
+    raise OSError("calibrated source unavailable")
+OSError: calibrated source unavailable
+
+2026-08-31 20:20:17,647 WARNING record=asca/gis/retry attempt=1/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:20:17,648 WARNING record=asca/gis/retry attempt=2/4 transient=True error=RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+Traceback (most recent call last):
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/src/jaxa_udon3/desktop/observation_session.py", line 119, in load_observation_preview_resilient
+    observation = load_observation_preview(record, region, row_limit)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/unittest/mock.py", line 1189, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vilardellbelles/Desktop/jaxa_intern/UDON3_Theme2_Desktop_Performance/tests/test_progressive_scale_viewport.py", line 75, in preview
+    raise RuntimeError(
+RuntimeError: Can't open a connection to same database file with a different configuration than existing connections
+
+2026-08-31 20:20:17,648 INFO record=asca/gis/retry recovered_on_attempt=3/4

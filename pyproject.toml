@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jaxa-udon3-explorer"
+version = "0.1.0"
+description = "Multi-mission JAXA DARTS/UDON3 X-ray event explorer"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "astropy",
+  "duckdb",
+  "numpy",
+  "pandas",
+  "pyarrow",
+  "pyvista",
+  "pyside6>=6.8",
+  "pyvistaqt>=0.11",
+  "pyqtgraph>=0.13.7",
+  "scipy>=1.13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.6"]
+
+[project.scripts]
+udon3-desktop = "jaxa_udon3.desktop.app:main"
+udon3-bootstrap = "jaxa_udon3.cli.bootstrap:main"
+udon3-cache = "jaxa_udon3.cli.cache:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "real_data: opt-in validation against cached/downloaded DARTS parquet files",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# Keep the project gate deterministic; broad exception handling is reviewed at
+# the UI/network fault-isolation boundaries rather than rejected mechanically.
+select = ["E4", "E7", "E9", "F", "I", "UP", "SIM", "RUF"]
+ignore = ["E402", "F403", "F405", "RUF001", "RUF003", "SIM105"]

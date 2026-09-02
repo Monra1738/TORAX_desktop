@@ -1,0 +1,67 @@
+UDON3 Theme 2 Desktop — Performance Revision Validation
+=======================================================
+
+Implementation checks completed in the packaging environment:
+
+PASS — 156 tests and 20 subtests across state, science, persistence, data contracts, UI controls, and structure
+PASS — 500-record progressive queue completed with no dropped items
+PASS — 500 concurrent shared-DuckDB metadata write/read cycles completed with no conflicts
+PASS — 500 real cached region-preview parquet files loaded; 3,606,394 RA/DEC/KEV rows validated; 0 failures
+PASS — real saved workspace recovered from 15 loaded + 128 failed to 143 loaded + 0 failed
+PASS — application restart restored all 143 observations again with 0 failures
+PASS — raw spectrum counts remain unchanged when the optional Gaussian overlay is enabled
+PASS — Previous/Next and automatic ping-pong energy-band movement preserve band width
+PASS — independent 3D/2D band scopes default to all loaded preview events and persist safely
+PASS — offline data-contract suite rejects malformed files and filters negative PI sentinels before calibration
+PASS — headless GUI control smoke tests cover coordinate modes, all eight instrument selectors, render modes, RGB/image controls, and spectrum scales
+PASS — all Python source files compile/parse
+PASS — no source module exceeds the project's 600-line rule
+PASS — desktop-only distribution; no synthetic demo or web UI
+PASS — Cas A reference bands regression:
+       1.55–1.75, 1.75–1.95, 2.35–2.52, 3.93–6.23 keV
+PASS — state cache regression for repeated visible-frame selection
+PASS — automatic image-quality regression
+PASS — RA wrap / RGB shared grid / 3D voxel histogram science-view tests
+PASS — workspace DuckDB round-trip, autosave target isolation and 50 → 143 observation restore
+PASS — global 3D point-budget allocation stays within its configured hard limit
+PASS — coordinate-label parsing, ROI wrap/full-range, RGB and PI→keV regression matrix
+PASS — observation-browser “Load all N matching” emits every not-yet-loaded search result
+PASS — exact all-event image streams parquet batches and preserves histogram/event-count equality
+PASS — ASCA GIS calibration detects both 1024-channel and 256-channel PI encodings
+
+Synthetic state-layer performance microbenchmark (500,000 rows):
+- first visible-frame selection: about 8.45 ms
+- repeated cached selection: about 0.006 ms
+- first energy filtering: about 0.90 ms
+- repeated cached energy filtering: about 0.008 ms
+
+This is NOT an end-to-end GUI benchmark. Native VTK/Qt performance depends on the Mac,
+GPU/OpenGL, dataset mix, network/cache state and requested rendering settings.
+
+The complete test suite currently passes in this environment. PostgreSQL worker/admin/import
+services are intentionally not part of the native desktop distribution; local DuckDB remains
+the catalog, cache, and workspace store. A headless Qt Inspector
+smoke test also passed; full interactive VTK camera performance still needs final
+verification on the target macOS OpenGL hardware.
+
+Cas A real-data check:
+- `python scripts/check_cas_a_real_data.py --include-xtend` downloaded and cached the two 1993
+  ASCA observations 50018000/50018010 (GIS/SIS), Suzaku XIS 507038010, XRISM Resolve
+  000129000/000130000, and XRISM Xtend 000129000/000130000.
+- Four exact bands were generated at 240x240 bins with square-root/inferno display scaling.
+- The all-event product streamed 104,382,998 valid (PI >= 0) events; histogram sum equals this count.
+- The ASCA-only comparison uses both 1993 pointings associated with Holt et al. (1994).
+- The paper panels are PSF-restored to approximately 30 arcsec FWHM; UDON3's result is an exact
+  raw-event histogram, so pixel identity is not claimed.
+- `QT_QPA_PLATFORM=offscreen udon3-desktop --no-3d --screenshot
+  var/exports/final_all_events_ui.png` produced a non-empty PNG; a clean-root run also
+  produced `/private/tmp/udon3_final_ui.png` with the default Energy controls.
+
+Recommended macOS verification:
+
+  python3.11 -m venv .venv
+  source .venv/bin/activate
+  python -m pip install --upgrade pip setuptools wheel
+  python -m pip install -e '.[dev]'
+  python -m unittest discover -v tests
+  udon3-desktop
