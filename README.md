@@ -5,8 +5,6 @@ UDON3 Theme 2 is a **desktop-only** JAXA/DARTS X-ray event exploration tool buil
 for DARTS catalog access, Sesame/WCS coordinates, instrument PI→keV calibration, caching,
 and exact science products.
 
-![Desktop design reference](docs/DESKTOP_UI_REFERENCE.png)
-
 ## Performance-first revision
 
 This build is focused on making the UI feel immediate while keeping the scientific workflow
